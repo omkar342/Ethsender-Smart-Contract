@@ -5,8 +5,8 @@ pragma solidity >=0.6.0 <=0.9.0;
 contract SendEther {
     uint public totalBalance;
 
-    function receiveEthers(uint256 amountOfEthersReceived) external payable {
-        totalBalance += amountOfEthersReceived;
+    function receiveEthers() external payable {
+        totalBalance += msg.value;
     }
 
     function sendEthers(
